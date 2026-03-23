@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+</style>
+
+<head>
+
+</head>
+
+<body>
+<h1>PIZZA by the SLICE</h1>
+<h2>Order</h2>
+
+<h3>Personal Details</h3>
+<form action="action_page.php" target="_self">
+	<label for="fullname"> <b>Full Name:</b></label><br>
+	<input type="text" id="fullname" name="fullname"><br>
+	<label for="email"> <b>Email:</b></label><br>
+	<input type="text" id="email" name="email"><br>
+	<label for="phone"> <b>Phone:</b></label><br>
+	<input type="text" id="phone" name="phone"><br>
+	<label for="age"> <b>Age:</b></label><br>
+	<input type="text" id="age" name="age"><br>
+
+<!-- Size -->
+<h3>Pizza Size</h3>
+	<input type="radio" id="small" name="pizza_size" value="small">
+	<label for="small">Small</label><br>
+	<input type="radio" id="medium" name="pizza_size" value="medium">
+	<label for="medium">Medium</label><br>
+	<input type="radio" id="large" name="pizza_size" value="large">
+	<label for="large">Large</label><br>
+	<input type="radio" id="extra_large" name="pizza_size" value="extra_large">
+	<label for="extra_large">Extra Large</label><br>
+
+<!-- Crust -->
+<h3>Pizza Crust Type</h3>
+<hr>
+<p>Crust:</p><br>
+
+
+
+<!-- Sauce -->
+<h3>Pizza Sauce</h3>
+<hr>
+<p>Sauce:</p><br>
+
+
+
+<!-- Toppings -->
+<h3>Toppings</h3>
+<hr>
+	<input type="checkbox" id="cheese" name="toppings" value="cheese">
+	<label for="cheese">Cheese</label><br>
+	<input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+	<label for="pepperoni">Pepperoni</label><br>
+	<input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+	<label for="mushrooms">Mushrooms</label><br>
+	<input type="checkbox" id="onions" name="toppings" value="onions">
+	<label for="onions">Onions</label><br>
+	<input type="checkbox" id="bell_pepper" name="toppings" value="bell_pepper">
+	<label for="bell_pepper">Bell Pepper</label><br>
+	<input type="checkbox" id="olives" name="toppings" value="olives">
+	<label for="olives">Olives</label><br>
+	<input type="checkbox" id="bacon" name="toppings" value="bacon">
+	<label for="bacon">Bacon</label><br>
+	<input type="checkbox" id="pineapple" name="toppings" value="pineapple">
+	<label for="pineapple">Pineapple</label><br>
+
+<!-- Delivery Method -->
+<h3>Delivery Method</h3>
+<hr>
+	<input type="radio" id="home_delivery" name="pizza_size" value="home_delivery">
+	<label for="home_delivery">Home Delivery</label><br>
+	<input type="radio" id="store_pickup" name="pizza_size" value="store_pickup">
+	<label for="store_pickup">Store Pickup</label><br>
+
+<!-- Address -->
+<p>Delivery your Pizza to:</p>
+<hr>
+
+
+<h3>Payment Information</h3>
+<hr>
+<p>Payment Details</p>
+	<label for="payment">Payment Method:</label><br>
+	<select name="payment" id="payment" form="-- Choose payment --">
+	<option value="Credit_Card">Credit Card</option>
+	<option value="GCash">GCash</option>
+	<option value="Cash_on_Delivery">Cash on Delivery</option>
+	</select>
+	<br>
+	<label for="cardnum">Card Number(Required for Credit Card only)</label><br>
+	<input type="text" id="card_number" name="card_number"><br>
+
+<h3>Order Summary</h3>
+<hr>
+<table>
+<tr>
+	<td>Size</td>
+	<td>Base Price</td>
+	<td>Extra Toppings (each)</td>
+</tr>
+<tr>
+	<td>Small</td>
+	<td>₱199</td>
+	<td>+₱30</td>
+</tr>
+<tr>
+	<td>Medium</td>
+	<td>₱299</td>
+	<td>+₱25</td>
+</tr>
+<tr>
+	<td>Large</td>
+	<td>₱399</td>
+	<td>+₱30</td>
+</tr>
+<tr>
+	<td>Extra Large</td>
+	<td>₱499</td>
+	<td>+₱35</td>
+</tr>
+</table>
+
+<!-- Place My Order and Submit Form -->
+<input type="submit" value="Place My Order">
+
+</form>
+
+</body>
+
+</html>
