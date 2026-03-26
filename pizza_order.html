@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+	body {
+    	font-family: a, sans-serif;
+	}
+	
+	h1{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	h2 {
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	h3, label{
+		text-align: left;
+		margin-bottom: 
+	}
+
+	p {
+		text-align: center;
+		margin-top: 5px;
+	}
+
+	table {
+		border-collapse: collapse;
+		table-layout: fixed;
+		width: 100%;
+		background-color: #eeeeee;
+	}
+
+	th, td {
+		border: 1px solid black;
+		text-align: center;
+		height: 25px;
+		padding: 10px;
+	}
+
+	.container {
+		width: 500px;
+		margin-top: auto;
+		margin-left: auto;
+		margin-right: auto;
+		background: #eeeeee;
+		padding: 85px;
+		border-radius: 50px;
+		box-sizing: content-box; 
+			width: 700px;
+			padding: 35px;
+			border: 3px 
+			solid rgb(234, 42, 42);
+    }
+	
+</style>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<title> BUCAY, CASTRO, SAPIN - Lab 3 HTML Forms: Pizza By the Slice</title>
+</head>
+
+
+<body>
+	<h1>PIZZA BY THE SLICE</h1>
+	<h2>Order Now!</h2>
+	<p>Fill out the form below and customize your pizza exactly how you like it!</p>
+
+	<div class="container">
+		<!-- Personal Details -->
+		<h3>Personal Details</h3>
+		<hr>
+		<form action="action_page.php" target="_self">
+			<label for="fullname"> <b>Full Name:</b></label><br>
+			<input type="text" id="fullname" name="fullname" minlength="5" maxlength="60" size="60"required><br>
+			<label for="email"> <b>Email:</b></label><br>
+			<input type="text" id="email" name="email" size="60" required><br>
+			<label for="phone"> <b>Phone:</b></label><br>
+			<input type="text" id="phone" name="phone" pattern="[0-9]{7,11}" size="60" required><br>
+			<label for="age"> <b>Age:</b></label><br>
+			<input type="text" id="age" name="age" min="13" max="99" size="60" required><br>
+
+		<!-- Size -->
+		<h3>Pizza Size</h3>
+		<hr>
+			<input type="radio" id="small" name="pizza_size" value="small">
+			<label for="small">Small</label><br>
+			<input type="radio" id="medium" name="pizza_size" value="medium" checked>
+			<label for="medium">Medium</label><br>
+			<input type="radio" id="large" name="pizza_size" value="large">
+			<label for="large">Large</label><br>
+			<input type="radio" id="extra_large" name="pizza_size" value="extra_large">
+			<label for="extra_large">Extra Large</label><br>
+
+		<!-- Crust -->
+		<h3>Pizza Crust Type</h3>
+		<hr>
+			<label for="crust">Crust Type:</label><br>
+			<select name="crust" id="crust" form="-- Choose a crust --">
+			<option value="thin">Thin</option>
+			<option value="thick">Thick</option>
+			<option value="stuffd">Stuffed</option>
+			<option value="gluten-free">Gluten-Free</option> 
+			</select><br>
+
+		<!-- Sauce -->
+		<h3>Pizza Sauce</h3>
+		<hr>
+			<label for="sauce">Sauce:</label><br>
+			<select name="sauce" id="sauce">
+			<optgroup label="Classic">
+				<option value="tomato">Tomato</option>
+				<option value="garlic-white">Garlic White</option>
+			</optgroup>
+			<optgroup label="Special">
+				<option value="pesto">Pesto</option>
+				<option value="barbeque">Barbeque</option>
+			</optgroup>
+			</select><br>
+			
+		<!-- Toppings -->
+		<h3>Toppings</h3>
+		<hr>
+			<input type="checkbox" id="cheese" name="toppings" value="cheese" checked disabled>
+			<label for="cheese">Cheese (Included)</label><br>
+			<input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+			<label for="pepperoni">Pepperoni</label><br>
+			<input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+			<label for="mushrooms">Mushrooms</label><br>
+			<input type="checkbox" id="onions" name="toppings" value="onions">
+			<label for="onions">Onions</label><br>
+			<input type="checkbox" id="bell_pepper" name="toppings" value="bell_pepper">
+			<label for="bell_pepper">Bell Pepper</label><br>
+			<input type="checkbox" id="olives" name="toppings" value="olives">
+			<label for="olives">Olives</label><br>
+			<input type="checkbox" id="bacon" name="toppings" value="bacon">
+			<label for="bacon">Bacon</label><br>
+			<input type="checkbox" id="pineapple" name="toppings" value="pineapple" title="Warning: Pineapple on pizza is controversial!">
+			<label for="pineapple">Pineapple</label><br>
+
+		<!-- Delivery Method -->
+		<h3>Delivery Method</h3>
+		<hr>
+			<input type="radio" id="home_delivery" name="pizza_size" value="home_delivery">
+			<label for="home_delivery">Home Delivery</label><br>
+			<input type="radio" id="store_pickup" name="pizza_size" value="store_pickup">
+			<label for="store_pickup">Store Pickup</label><br>
+
+			<!-- Address -->
+			<br>
+			<label for="address">Deliver your Pizza to:</label><br>
+			<textarea name="address" rows="3" cols="92" placeholder="Enter your full delivery address here."></textarea>
+		
+		<!-- Payment Information -->
+		<h3>Payment Information</h3>
+		<hr>
+		<fieldset>
+		<legend>Payment Details</legend>
+			<label for="payment">Payment Method:</label><br>
+			<select name="payment" id="payment" form="-- Choose payment --">
+			<option value="Credit_Card">Credit Card</option>
+			<option value="GCash">GCash</option>
+			<option value="Cash_on_Delivery">Cash on Delivery</option>
+			</select>
+			<br>
+
+			<label for="card_number">Card Number(Required for Credit Card only)</label><br>
+			<input type="text" id="card_number" name="card_number" pattern="[0-9]{16}" placeholder="1234567890123456"><br>
+		</fieldset>
+
+		<!--Order Summary-->
+		<h3>Order Summary</h3>
+		<hr>
+		<table>
+			<tr>
+				<td width="100">Size</td>
+				<td width="100">Base Price</td>
+				<td width="150">Extra Toppings (each)</td>
+			</tr>
+			<tr>
+				<td>Small</td>
+				<td>₱199</td>
+				<td>+₱30</td>
+			</tr>
+			<tr>
+				<td>Medium</td>
+				<td>₱299</td>
+				<td>+₱25</td>
+			</tr>
+			<tr>
+				<td>Large</td>
+				<td>₱399</td>
+				<td>+₱30</td>
+			</tr>
+			<tr>
+				<td>Extra Large</td>
+				<td>₱499</td>
+				<td>+₱35</td>
+			</tr>
+		</table>
+		<br>
+
+		<!-- Place My Order and Submit Form -->
+		<input type="submit" value="Place My Order">
+		<input type="reset" value="Start Over">
+
+		</form>
+	</div>
+</body>
+</html>
